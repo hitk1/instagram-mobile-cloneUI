@@ -6,6 +6,7 @@ export interface IFeed{
     description: string
     authoriId: number
     author: IAuthor
+    isFavorite?: boolean
 }
 
 export interface IAuthor {

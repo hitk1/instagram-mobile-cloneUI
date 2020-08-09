@@ -1,15 +1,25 @@
 import React from 'react';
-import { View, StatusBar } from 'react-native';
+import { StatusBar, useColorScheme } from 'react-native';
+import { ThemeProvider } from 'styled-components'
 
-// import { Container } from './styles';
 import Routes from './routes'
+import themes from './themes'
 
 const src: React.FC = () => {
+
+  //Pode retornar dark, light e null
+  const userTheme = useColorScheme()
+  const theme = themes['dark']
+
   return (
-    <>
-    <StatusBar backgroundColor="#F5F5F5" barStyle="dark-content"/>
-    <Routes />
-    </>
+    <ThemeProvider theme={theme}>
+      {/* <StatusBar backgroundColor="#F5F5F" barStyle="dark-content" /> */}
+      <StatusBar
+        backgroundColor={themes['dark'].screenBackground}
+        barStyle={userTheme == 'light' ? "dark-content" : 'light-content'}
+      />
+      <Routes />
+    </ThemeProvider>
   )
 }
 
