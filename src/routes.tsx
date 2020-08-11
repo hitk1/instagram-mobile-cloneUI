@@ -17,15 +17,17 @@ const Stack = createStackNavigator()
 const Routes = () => {
 
     const userTheme = useColorScheme()
-    const theme = themes['dark']
+    const theme = themes[userTheme || 'light']
+
+    console.log(userTheme)
 
     return (
         <NavigationContainer>
             <Stack.Navigator
                 screenOptions={{
-                    headerTitle: () => userTheme == 'light'
-                        ? <LogoDarken width={110} height={70} />
-                        : <LogoLighten width={110} height={70} />
+                    headerTitle: () => userTheme === 'light'
+                        ? <LogoLighten width={110} height={70} />
+                        : <LogoDarken width={110} height={70} />
                     ,
                     headerTitleAlign: "center",
                     headerStyle: {

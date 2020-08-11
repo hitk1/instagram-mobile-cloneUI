@@ -5,82 +5,9 @@ export const Container = styled.View`
     background-color: ${(props: any) => props.theme.screenBackground};
 `;
 
-export const Post = styled.View`
-  margin-top: 10px;
-  background-color: ${(props: any) => props.theme.screenBackground};
-`;
-
-export const UserInfoWrapper = styled.View`
-    flex-direction: row;
-    align-items: center;
-`;
-
-export const FollowLink = styled.Text`
-    color: blue;
-    font-weight: bold;
-`;
-
-export const Header = styled.View`
-    padding: 10px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-`;
-
-export const Avatar = styled.Image`
-    width: 32px;
-    height: 32px;
-    border-radius: 16px;
-    margin-right: 10px;
-`;
-
-export const Name = styled.Text`
-    color: ${(props: any) => props.theme.textColor};
-    font-weight: bold;
-`;
-
-export const PostImage = styled.Image`
-    aspect-ratio: ${(props: any) => props.ratio};
-    width: 100%;
-`;
-
-export const Description = styled.Text`
-    padding: 0 15px;
-    line-height: 18px;
-    color: ${(props: any) => props.theme.textColor};
-`;
-
 export const Loading = styled.ActivityIndicator.attrs({
     size: 'small',
     color: `${(props: any) => props.theme.textColor}`,
 })`
     margin: 30px 0;
-`;
-
-export const IconsWrapper = styled.View`
-    padding: 8px;
-    flex-direction: row;
-`;
-
-export const LikeButton = styled(RectButton)`
-    height: 32px;
-    width: 32px;
-    align-items: center;
-    justify-content: center;
-`;
-
-export const CommentButton = styled(RectButton)`
-    height: 32px;
-    width: 32px;
-    margin-left: 5px;
-    align-items: center;
-    justify-content: center;
-`;
-
-export const DirectMessageButton = styled(RectButton)`
-    height: 32px;
-    width: 32px;
-    margin-left: 5px;
-    align-items: center;
-    justify-content: center;
 `;

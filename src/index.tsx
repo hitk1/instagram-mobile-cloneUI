@@ -9,13 +9,12 @@ const src: React.FC = () => {
 
   //Pode retornar dark, light e null
   const userTheme = useColorScheme()
-  const theme = themes['dark']
+  const theme = themes[userTheme || 'light']
 
   return (
     <ThemeProvider theme={theme}>
-      {/* <StatusBar backgroundColor="#F5F5F" barStyle="dark-content" /> */}
       <StatusBar
-        backgroundColor={themes['dark'].screenBackground}
+        backgroundColor={theme.screenBackground}
         barStyle={userTheme == 'light' ? "dark-content" : 'light-content'}
       />
       <Routes />
